@@ -1,0 +1,299 @@
+@font-face {
+    font-family:fut;
+    src: url("Futura-Bold.ttf");
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gilroy';
+}
+
+*::selection{
+    color:white;
+    background-color:black ;
+}
+
+
+html, body{
+    height: 100%;
+    width: 100%;
+}
+
+body{
+    background-color: #f7f7f7;
+}
+
+
+#nav{
+    width: 100%;
+    position: fixed;
+    z-index: 99;
+    padding: 25px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+#nav #nav-part2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+}
+
+#links{
+    padding: 10px;
+}
+
+#icons{
+    padding: 10px;
+    border-radius: 50px;
+    background-color:#f7f7f7 ;
+}
+
+#nav-part1 {
+    height: 82px;
+    overflow: hidden;
+}
+
+
+#nav-part1 svg{
+    display: block;
+}
+
+
+#nav-part2 #links a{
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    font-size:14px ;
+    margin: 0 20px;
+}
+
+#nav-part2 #icons i{
+    font-size: 18px;
+    margin:0 20px;
+    font-weight:100;
+}
+
+
+
+#cursor{
+    height: 194px;
+    width: 194px;
+    background-color:palegoldenrod;
+    border-radius: 50%;
+    position: fixed;
+    transform: translate(-50%,-50%) scale(0);
+}
+
+#page1{
+    min-height: 100dvh;
+    position: relative;
+    width: 100%;
+    padding: 0 1vw;
+    padding-top: 30dvh;
+}
+
+
+#page1 h1{
+    font-size:15.9vw ;
+    text-transform: uppercase;
+    font-family:fut;
+    line-height: 14vw;
+    letter-spacing: -8px;
+    /*text-align: center;*/
+}
+
+#vid-cont{
+    height: 100dvh;
+    width: 100%;
+    background-color: grey;
+    margin-top: 1vw;
+    position: relative;
+}
+
+#vid-cont video{
+    height:100% ;
+    width: 100%;
+    object-fit: cover;
+}
+
+#vid-cont #play{
+    padding: 3vw 2.2vw;
+    background-color: black;
+    color: white;
+    font-size: 1.2vw;
+    position: fixed;
+    text-transform: uppercase;
+    font-family: fut;
+    border-radius: 50%;
+    opacity: 0;
+    scale: 0;
+}
+
+#page2{
+    min-height: 100dvh;
+    width: 100%;
+    position: relative;
+    display:flex;
+    align-items: center;
+    padding: 3vw 1vw;
+    justify-content: space-between;
+}
+
+#page2 .elem{
+    height: 100%;
+    width: 32.4%;
+    /*background-color: aquamarine;*/
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#page2 .elem img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    scale: 1.1;
+}
+
+#page2 .elem .dets{
+    height:60px;
+    border-radius: 50px;
+    width: 70%;
+    position: absolute;
+    z-index: 9;
+    background-color: palegoldenrod;
+    text-align: center;
+    padding-top: 18px;
+}
+
+#page2 .elem .dets:hover{
+    height:200px;
+}
+
+#detText{
+    background-color: aqua;
+}
+
+#page3{
+    min-height: 120dvh;
+    width: 100%;
+    position:relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.child{
+    height: 54vh;
+    width: 38vw;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content:center ;
+}
+
+.child img{
+    height: 100%;
+}
+
+#page4{
+    height: 70dvh;
+    width: 100%;
+    background-color: #333;
+    padding-top: 10vh;
+    padding-left: 2vw;
+    padding-right: 2vw;
+    position: relative;
+    display: flex;
+}
+
+p{
+    font-family: fut;
+    color:#f7f7f7;
+    font-size: 55px;
+    width: 70%;
+}
+
+#text4{
+    width: 20%;
+    font-family:"Helvetica Now Text", "Lucida Sans", Tahoma, sans-serif;
+    color: #f7f7f7;
+    font-size: 20px;
+}
+
+
+
+/*RESPONSIVE*/
+@media (max-width:600px) {
+     
+#page1 h1{
+    font-size:15.5vw ;
+    letter-spacing: -3px;
+}
+
+#page1{
+    min-height: 70dvh;
+    width: 100%;
+    padding: 0 3vw;
+    padding-top: 25dvh;
+}
+
+#vid-cont{
+    height: 25dvh;
+    margin-top: 3vw;
+}
+
+
+#vid-cont #play{
+    padding: 9.5vw 7.2vw;
+    font-size: 4.5vw;
+    position: absolute;
+    top:50%;
+    left: 50%;
+    opacity: 1;
+    scale: 1;
+    transform: translate(-50%,-50%);
+}
+
+
+#page2{
+    min-height: 100dvh;
+    width: 100%;
+    position: relative;
+    display:flex;
+    align-items: center;
+    padding: 5vw 3vw;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#page2 .elem{
+    height: 100dvh;
+    width: 100%;
+    /*background-color: aquamarine;*/
+    overflow: hidden;
+    margin-bottom: 3vw;
+}
+
+
+#page2 .elem .dets{
+    height:40px;
+    border-radius: 50px;
+    width: 70%;
+    position: absolute;
+    z-index: 9;
+    background-color: palegoldenrod;
+}
+
+}
+
+
